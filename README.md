@@ -1,81 +1,114 @@
-# Sales Data Analysis
+# Arabic Sentiment Analysis AI
 
-## Description
+A Natural Language Processing (NLP) project that analyzes Arabic customer reviews and predicts their sentiment using Machine Learning.
 
-This project focuses on analyzing a sales dataset using Python.
-The objective is to clean the data, explore sales information, and create visualizations to understand business trends.
+The project includes text preprocessing, model comparison, and a Streamlit web application for real-time sentiment prediction.
 
-## Objectives
+---
 
-* Clean and prepare the dataset
-* Perform exploratory data analysis (EDA)
-* Analyze sales performance
-* Study customer and regional information
-* Create visualizations to extract insights
+## Project Overview
 
-## Features
+The objective of this project is to build an AI system capable of classifying Arabic reviews into:
 
-* Data cleaning
-* Data preprocessing
-* Exploratory Data Analysis
-* Sales analysis
-* Customer analysis
-* Regional analysis
-* Data visualization
+- Positive sentiment
+- Negative sentiment
+
+The model learns from a large Arabic reviews dataset and can automatically analyze new user inputs.
+
+---
+
+## Dataset
+
+Dataset:
+
+**330K Arabic Sentiment Reviews Dataset**
+
+Details:
+
+- Number of reviews: 330,000
+- Language: Arabic
+- Type: Customer reviews
+
+Main features:
+
+- `content` : Review text
+- `label` : Sentiment label
+
+---
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Natural Language Processing (NLP)
+- TF-IDF Vectorization
+- Machine Learning
+- Streamlit
 
-## Project Structure
+---
 
-```
-Sales-Data-Analysis/
-│
-├── Sales_Data_Analysis.ipynb
-├── README.md
-└── requirements.txt
-```
+## Project Workflow
 
-## Installation
+### 1. Data Preparation
 
-Clone the repository:
+Steps performed:
 
-```bash
-git clone https://github.com/Allae20/Sales-Data-Analysis.git
-```
+- Dataset loading
+- Data exploration
+- Missing values checking
+- Arabic text cleaning
+- Text preprocessing
 
-Install the required libraries:
+---
 
-```bash
-pip install -r requirements.txt
-```
+### 2. Text Feature Extraction
 
-## Usage
+Arabic text was converted into numerical features using:
 
-Open the notebook:
+**TF-IDF Vectorization**
 
-```bash
-jupyter notebook Sales_Data_Analysis.ipynb
-```
+This technique allows machine learning algorithms to process textual data.
 
-Run the cells to reproduce the analysis and visualizations.
+---
 
-## Results
+### 3. Model Training and Comparison
 
-The project provides an overview of sales data and helps identify:
+Three machine learning models were evaluated:
 
-* Sales trends
-* Customer behavior
-* Regional performance
-* Important patterns in the dataset
+| Model | Accuracy |
+|---|---|
+| Logistic Regression | 88.03% |
+| SVM | 87.87% |
+| Naive Bayes | 84.31% |
 
-## Author
+---
 
-**Allae Elbaze**
-Master's Student in Computer Science and Artificial Intelligence
-Ibn Tofail University - Morocco
+## Best Model
+
+The best results were achieved using:
+
+**Logistic Regression**
+
+Accuracy:
+
+**88.03%**
+
+The model was selected and integrated into the final application.
+
+---
+
+## Streamlit Application
+
+A web application was developed using Streamlit.
+
+The application allows users to:
+
+- Enter an Arabic review
+- Predict sentiment
+- Display prediction confidence score
+
+Example:
+
+Input:
