@@ -2,7 +2,7 @@
 
 A Natural Language Processing (NLP) project that analyzes Arabic customer reviews and predicts their sentiment using Machine Learning.
 
-This project includes Arabic text preprocessing, feature extraction, machine learning model comparison, and a Streamlit application for real-time sentiment prediction.
+This project includes Arabic text preprocessing, feature extraction, model comparison, and a Streamlit web application for real-time sentiment prediction.
 
 ---
 
@@ -53,13 +53,13 @@ Main features:
 
 ### 1. Data Preparation
 
-The dataset was prepared through several steps:
+The dataset was prepared through the following steps:
 
-- Loading and exploring the data
+- Loading and exploring the dataset
 - Checking missing values
 - Cleaning Arabic text
 - Removing unnecessary characters
-- Preparing text data for classification
+- Preparing text data for machine learning
 
 ---
 
@@ -69,7 +69,7 @@ Arabic reviews were converted into numerical features using:
 
 **TF-IDF (Term Frequency-Inverse Document Frequency)**
 
-This technique allows machine learning algorithms to understand and process textual information.
+This technique allows machine learning algorithms to process textual information.
 
 ---
 
@@ -106,8 +106,8 @@ A web application was developed using Streamlit.
 The application allows users to:
 
 - Enter an Arabic review
-- Predict the sentiment
-- Display the confidence score
+- Predict sentiment
+- Display confidence score
 
 Example:
 
@@ -123,6 +123,12 @@ Output:
 Positive 😊
 Confidence Score: XX%
 ```
+
+---
+
+## Application Screenshot
+
+![Arabic Sentiment Analysis App](images/app_screenshot.png)
 
 ---
 
@@ -145,6 +151,7 @@ Arabic-Sentiment-Analysis/
 │   └── tfidf_vectorizer.pkl
 │
 └── images/
+    └── app_screenshot.png
 ```
 
 ---
@@ -157,7 +164,7 @@ Arabic-Sentiment-Analysis/
 pip install -r requirements.txt
 ```
 
-### Run the Streamlit application
+### Run the application
 
 ```bash
 streamlit run app.py
@@ -170,7 +177,7 @@ streamlit run app.py
 This project demonstrates a complete NLP Machine Learning pipeline:
 
 - Arabic text preprocessing
-- Feature extraction using TF-IDF
+- TF-IDF feature extraction
 - Machine learning model comparison
 - Sentiment classification
 - Model deployment using Streamlit
